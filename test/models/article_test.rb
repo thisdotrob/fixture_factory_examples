@@ -2,11 +2,11 @@ require "test_helper"
 
 class ArticleTest < ActiveSupport::TestCase
   define_factories do
-    factory(:article)
+    factory(:article, like: :one)
   end
 
   setup do
-    @article = create(:article, title: "MyStringOne", body: "MyTextOne")
+    @article = create(:article)
   end
 
   test "test 1" do
