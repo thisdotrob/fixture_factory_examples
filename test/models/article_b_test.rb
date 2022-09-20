@@ -2,8 +2,9 @@ require "test_helper"
 
 class ArticleBTest < ActiveSupport::TestCase
   define_factories do
-    factory(:article_one, class: -> { Article }, like: :one, via: :articles) do
-      { body: "MyTextOne" }
+    factory(:article)
+    factory(:article_one, parent: :article) do
+      { title: "MyStringOne", body: "MyTextOne" }
     end
   end
 
