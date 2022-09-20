@@ -1,8 +1,12 @@
 require "test_helper"
 
 class ArticleTest < ActiveSupport::TestCase
+  define_factories do
+    factory(:article)
+  end
+
   setup do
-    @article = articles(:one)
+    @article = create(:article, title: "MyStringOne", body: "MyTextOne")
   end
 
   test "test 1" do

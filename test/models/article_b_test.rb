@@ -1,8 +1,12 @@
 require "test_helper"
 
 class ArticleBTest < ActiveSupport::TestCase
+  define_factories do
+    factory(:article)
+  end
+
   setup do
-    @article = articles(:one)
+    @article = create(:article, title: "MyStringOne", body: "MyTextOne")
   end
 
   test "test 3" do
@@ -13,4 +17,3 @@ class ArticleBTest < ActiveSupport::TestCase
     assert_equal "MyTextOne", @article.body
   end
 end
-

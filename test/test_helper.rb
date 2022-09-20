@@ -3,8 +3,8 @@ require_relative "../config/environment"
 require "rails/test_help"
 
 class ActiveSupport::TestCase
-  #include FixtureFactory::Registry
-  #include FixtureFactory::Methods
+  include FixtureFactory::Registry
+  include FixtureFactory::Methods
 
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
